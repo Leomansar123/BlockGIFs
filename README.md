@@ -23,11 +23,3 @@ Use **Remove** to unblock a GIF. Changes save immediately and apply to already v
 - No external requests or downloads are made by the plugin. Blocking only changes your local message display; Discord may still download the media. It is not a network filter.
 
 The filter covers rendered chat messages, including history when you scroll to it. It does not filter the GIF picker, avatars, or standalone media viewers. Discord interface changes may require selector updates.
-
-## Development
-
-Run `npm ci`, then `npm test` and `npm run check`. Tests exercise the plugin against a simulated Discord DOM and BetterDiscord APIs. A live BetterDiscord client is still needed to verify compatibility with your specific Discord build.
-
-Run `npm run test:browser` to check settings against a background focus handler that tries to redirect typing to the plugin search. This uses an installed Edge or Chrome; set `BGIF_BROWSER` to another Chromium executable if needed. The settings use a native modal dialog to keep background search fields from stealing focus. Done and Escape close the settings and restore normal background interaction.
-
-API references: [BetterDiscord plugin structure](https://docs.betterdiscord.app/plugins/introduction/structure), [settings](https://docs.betterdiscord.app/plugins/tutorials/settings), and [data storage](https://docs.betterdiscord.app/api/Data).
